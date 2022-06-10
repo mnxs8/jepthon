@@ -189,14 +189,14 @@ async def _(event):
 async def jepvois(vois):
   rl = random.randint(3,267)
   url = f"https://t.me/AudiosWaTaN/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="⌯︙[ ┈┉━｢ ＪΞＰＴΗＯＮ ｣━┅┈ ](t.me/jepthon)",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="⌯︙BY : @JEPTHON 🎀",parse_mode="html")
   await vois.delete()
 
 @jmthon.on(admin_cmd(outgoing=True, pattern="شعر$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/L1BBBL/{rl}"
-  await vois.client.send_file(vois.chat_id,url,caption="⌯︙[ ┈┉━｢ ＪΞＰＴΗＯＮ ｣━┅┈ ](t.me/jepthon)",parse_mode="html")
+  await vois.client.send_file(vois.chat_id,url,caption="⌯︙BY : @JEPTHON 🎀",parse_mode="html")
   await vois.delete()
 @bot.on(admin_cmd(pattern="ث اندرويد"))
 async def _(event):
