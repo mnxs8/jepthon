@@ -191,7 +191,7 @@ async def jepvois(vois):
   url = f"https://t.me/AudiosWaTaN/{rl}"
   await vois.client.send_file(vois.chat_id,url,caption="- @Jepthon",parse_mode="html")
 
-@jmthon.on(admin_cmd(outgoing=True, pattern="قران$"))
+@jmthon.on(admin_cmd(outgoing=True, pattern="شعر$"))
 async def jepvois(vois):
   rl = random.randint(2,101)
   url = f"https://t.me/L1BBBL/{rl}"
