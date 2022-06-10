@@ -1,4 +1,5 @@
 import asyncio
+import random
 from asyncio.exceptions import TimeoutError
 
 from telethon import events
@@ -184,26 +185,17 @@ async def _(event):
         else:
             await catevent.delete()
             await event.client.send_message(event.chat_id, response.message)
-@bot.on(admin_cmd(pattern="غنيلي"))
-async def _(event):
-    chat = "@GaneleBot"
-    catevent = await edit_or_reply(event, "جارِ اختيار مقطع صوتي لعيونك 🎀..!")
-    async with event.client.conversation(chat) as conv:
-        try:
-            response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=2120653489)
-            )
-            await event.client.send_message(chat, "غنيلي")
-            response = await response
-            await event.client.send_read_acknowledge(conv.chat_id)
-        except YouBlockedUserError:
-            await catevent.edit("**╮•⎚ تحـقق من انـك لم تقـم بحظر البوت @GaneleBot .. ثم اعـد استخدام الامـر ...🤖♥️**")
-            return
-        if response.text.startswith("I can't find that"):
-            await catevent.edit("**╮•⎚ عـذراً .. لـم استطـع ايجـاد المطلـوب ☹️💔**")
-        else:
-            await catevent.delete()
-            await event.client.send_message(event.chat_id, response.message)
+@jmthon.on(admin_cmd(outgoing=True, pattern="غنيلي$"))
+async def jepvois(vois):
+  rl = random.randint(3,267)
+  url = f"https://t.me/AudiosWaTaN/{rl}"
+  await vois.client.send_file(vois.chat_id,url,caption="- @Jepthon",parse_mode="html")
+
+@jmthon.on(admin_cmd(outgoing=True, pattern="قران$"))
+async def jepvois(vois):
+  rl = random.randint(2,101)
+  url = f"https://t.me/L1BBBL/{rl}"
+  await vois.client.send_file(vois.chat_id,url,caption="- @Jepthon",parse_mode="html")
 @bot.on(admin_cmd(pattern="ث اندرويد"))
 async def _(event):
     chat = "@ThemeJepBoT"
