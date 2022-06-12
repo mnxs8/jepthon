@@ -8,9 +8,6 @@ from . import hmention, reply_id
 from ..sql_helper.globals import gvarstatus
 plugin_category = "tools"
 
-JEP_TXT = gvarstatus("ALIVE_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/Jepthon)**"
-PING_PIC = gvarstatus("PING_PIC") or Config.P_PIC
-
 
 @jmthon.ar_cmd(
     pattern="بنك$",
@@ -31,6 +28,9 @@ async def _(event):
     await cat.delete()
     ms = (end - start).microseconds / 1000
     jmthon_caption = gvarstatus("ALIVE_TEMPLATE") or temp
+    JEP_TXT = gvarstatus("ALIVE_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/Jepthon)**"
+    PING_PIC = gvarstatus("PING_PIC") or Config.P_PIC
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "✇ ◅"
     caption = jmthon_caption.format(
         PING_TEXT=PING_TEXT,
         EMOJI=EMOJI,
