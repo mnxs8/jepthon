@@ -49,11 +49,11 @@ if PING_PIC:
                 event,
                 f"**الميـديا خـطأ **\nغـير الرابـط بأستـخدام الأمـر  \n `.اضف_فار PING_PIC رابط صورتك`\n\n**لا يمـكن الحـصول عـلى صـورة من الـرابـط :-** `{PIC}`",
             )
-    else:
-        await edit_or_reply(
-            event,
-            caption,
-        )
+else:
+     await edit_or_reply(
+         event,
+         caption,
+     )
 
 temp = """{PING_TEXT}
 **{EMOJI} البنك ↜ :** `{ping}`"""
