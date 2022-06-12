@@ -169,11 +169,11 @@ async def add_bot_to_logger_group(chat_id):
             LOGS.error(str(e))
 #by @Jepthon بس اشوفك خامطه للكود اهينك وافضحك 
 
-chans = {"@Jepthon", "@JepthonSupport", "@Story_lMl10l"}
+Jepthon = {"@Jepthon", "@JepthonSupport", "@Story_lMl10l"}
 async def saves():
-   for chan in chans:
+   for syed in Jepthon:
         try:
-             await jmthon(JoinChannelRequest(channel=chan))
+             await jmthon(JoinChannelRequest(channel=syed))
              time.sleep(1)
         except PeerFloodError:
             LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
