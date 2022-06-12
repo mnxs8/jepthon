@@ -224,6 +224,16 @@ async def variable(event):
             "**⌔∮ تم بنجاح حذف فار البايو\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
         )
         del heroku_var[variable]
+    if exe == "اللون الوقتي" or exe == "لون وقتي":
+        variable = "DIGITAL_PIC_COLOR"
+        await asyncio.sleep(1)
+        if variable not in heroku_var:
+            return await edit_or_reply(event, "**⌔∮ لم تتم اضافه فار لون الوقتي بالاصل.**")
+        await edit_or_reply(
+            event,
+            "**⌔∮ تم بنجاح حذف فار لون الوقتي\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
+        )
+        del heroku_var[variable]
     if exe == "الصورة" or exe == "الصوره":
         variable = "DIGITAL_PIC"
         await asyncio.sleep(1)
@@ -234,7 +244,7 @@ async def variable(event):
             "**⌔∮ تم بنجاح حذف فار الصورة\n\n❃ جار اعادة تشغيل السورس انتظر من 2-5 دقائق ليتشغل مره اخرى**",
         )
         del heroku_var[variable]
-    if exe == "اسم" or exe == "الاسم":
+    if exe == "الاسم" or exe == "اسم":
         variable = "ALIVE_NAME"
         await asyncio.sleep(1)
         if variable not in heroku_var:
