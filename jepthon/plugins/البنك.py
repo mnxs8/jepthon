@@ -1,44 +1,48 @@
-
-import os
-import asyncio
+import random
+import re
+import time
 from datetime import datetime
 
-from jepthon import CMD_HELP, jmthon
-from . import hmention, reply_id
-from ..sql_helper.globals import gvarstatus
-plugin_category = "tools"
-
-
-@jmthon.ar_cmd(
-    pattern="بنك$",
-    command=("بنك", plugin_category),
-    info={
-        "header": "امر تجربه البوت اذا يشتغل ارسل  .بنك فقط",
-        "option": "امر بنك المتطور كتابة  @RR7PP",
-        "usage": ["{tr}البنك", ],
-    },
+from telethon.errors.rpcerrorlist import (
+    MediaEmptyError,
+    WebpageCurlFailedError,
+    WebpageMediaEmptyError,
 )
-async def _(event):
-    if event.fwd_from:
-        return
+
+from jepthon import jmthon
+
+from ..core.managers import edit_or_reply
+from ..helpers.utils import reply_id
+from ..sql_helper.globals import gvarstatus
+from . import mention
+
+plugin_category = "utils"
+
+#كتـابة وتعـديل:  @lMl10l
+@jmthon.on(admin_cmd(pattern=f"بنك(?:\s|$)([\s\S]*)"))
+    
+async def amireallyalive(event):
+    "للتـأكد من ان البـوت يعـمـل"
     reply_to_id = await reply_id(event)
+    uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    cat = await edit_or_reply(event, "<b><i>   البــــنك...  </b></i>", "html")
+    await edit_or_reply(event, "** ⌯︙يتـم التـأكـد انتـظر قليلا رجاءا**")
     end = datetime.now()
-    await cat.delete()
     ms = (end - start).microseconds / 1000
-    jmthon_caption = gvarstatus("ALIVE_TEMPLATE") or temp
-    JEP_TXT = gvarstatus("ALIVE_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/Jepthon)**"
-    PING_PIC = gvarstatus("PING_PIC") or Config.P_PIC
+    _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✇ ◅"
-    caption = jmthon_caption.format(
+    PING_TEXT = gvarstatus("PING_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/Jepthon)**"
+    PING_IMG = gvarstatus("PING_PIC") or Config.P_PIC
+    jepthon_caption = gvarstatus("PING_TEMPLATE") or temp
+    caption = jepthon_caption.format(
         PING_TEXT=PING_TEXT,
         EMOJI=EMOJI,
+        mention=mention,
         ping=ms,
     )
-    if PING_PIC:
-        RR7 = [x for x in PING_PIC.split()]
-        PIC = random.choice(RR7)
+    if PING_IMG:
+        JEP = [x for x in PING_IMG.split()]
+        PIC = random.choice(JEP)
         try:
             await event.client.send_file(
                 event.chat_id, PIC, caption=caption, reply_to=reply_to_id
@@ -55,11 +59,9 @@ async def _(event):
             caption,
         )
 
-temp = """{PING_TEXT}
-**{EMOJI} البنك ↜ :** `{ping}`"""
-#======================================================================================================================================
-CMD_HELP.update(
-    {
-        "البنك":".بنك\nجرب الامر بنفسك" 
-        }
-        )
+
+temp = """{ALIVE_TEXT}
+┏━━━━━━━┓
+┃ ✦ {ping}
+┃ ✦ {mention}
+┗━━━━━━━┛"""
