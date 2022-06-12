@@ -6,11 +6,8 @@ from datetime import datetime
 from jepthon import CMD_HELP, jmthon
 from . import hmention, reply_id
 from . import PING_PIC, PING_TEXT
-"""
-try:
-except:
-    pass
-"""
+#"""
+#"""
 plugin_category = "tools"
 
 PING_PIC = os.environ.get("PING_PIC") or ("https://telegra.ph/file/f18d1a1433d99a465b5ae.jpg")
