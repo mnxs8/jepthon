@@ -571,13 +571,13 @@ async def _(event):
 )
 
 @jmthon.ar_cmd(
-    pattern="اوامر الالعاب$",
-    command=("اوامر الالعاب", plugin_category),
+    pattern="اوامر الترفيه$",
+    command=("اوامر الترفيه", plugin_category),
 )
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit(
-        " قائمة اوامر الالعاب\n➖➖➖➖➖➖➖➖➖➖➖➖➖\n⌯︙اختر احدى هذه الاوامر\n\n- ( `.بلي` )\n- ( `.كت` )\n- ( `.خيروك` )\n\n➖➖➖➖➖➖➖➖➖➖➖➖➖\n⌔︙CH : @JepThon"
+        " قائمة اوامر الترفيه\n➖➖➖➖➖➖➖➖➖➖➖➖➖\n⌯︙اختر احدى هذه الاوامر\n\n- ( `.بلي` )\n- ( `.كت` )\n- ( `.خيروك` )\n- ( `.غنيلي` )\n- ( `.شعر` )\n- ( `.قران` )\n\n➖➖➖➖➖➖➖➖➖➖➖➖➖\n⌔︙CH : @JepThon"
 
 )
 
