@@ -58,7 +58,7 @@ async def amireallyalive(event):
         )
 
 
-temp = """{ALIVE_TEXT}
+temp = """{PING_TEXT}
 ┏━━━━━━━┓
 ┃ ✦ {ping}
 ┃ ✦ {mention}
