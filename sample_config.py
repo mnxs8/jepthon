@@ -37,7 +37,8 @@ class Config(object):
     AUTONAME = os.environ.get("AUTONAME", None)
 
     # تعديلي
-    PING_PIC = os.environ.get("PING_PIC")
+    PING_PIC = os.environ.get("PING_PIC", None)
+    PING_TEXT = os.environ.get("PING_TEXT", None)
     TIME_JEP = os.environ.get("TIME_JEP", None)
     JP_FN = os.environ.get("JP_FN", None)
     ID_EM = os.environ.get("ID_EM", None)
@@ -48,7 +49,6 @@ class Config(object):
     DOWN_ET = os.environ.get("DOWN_ET", None)
     WEL_ET = os.environ.get("WEL_ET", None)
     DEFAULT_PIC = os.environ.get("DEFAULT_PIC", None)
-    COLOR_TIME = os.environ.get("COLOR_TIME", None)
     RMVWEL_ET = os.environ.get("RMVWEL_ET", None)
     ALLWEL_ET = os.environ.get("ALLWEL_ET", None)
     SCPIC_CMD = os.environ.get("SCPIC_CMD", None)    
