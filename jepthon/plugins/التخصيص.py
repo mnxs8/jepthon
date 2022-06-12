@@ -107,6 +107,20 @@ async def custom_jepthon(event):
         text = " ".join(urls)
         addgvar("ALIVE_PIC", text)
         var = "ALIVE_PIC"
+    if (
+        input_str == "صورة البنك"
+        or input_str == "صورة بنك"
+        or input_str == "صوره البنك"
+        or input_str == "صوره بنك"
+    ):
+        urls = extractor.find_urls(reply.text)
+        if not urls:
+            return await edit_delete(
+                event, "**⪼ يجب عليك الرد على رابط تلجراف اولا**", 5
+            )
+        text = " ".join(urls)
+        addgvar("PING_PIC", text)
+        var = "PING_PIC"
     await edit_or_reply(event, f"**₰ تم بنجاح تحديث فار {input_str} 𓆰،**")
     delgvar(var)
     addgvar(var, text)
@@ -196,6 +210,12 @@ async def custom_jepthon(event):
                 event, "**⎙ :: عزيزي المستخدم انت لم تقوم باضافه هذا الفار اصلا**"
             )
         delgvar("MAX_FLOOD_IN_PMS")
+    if input_str == "صورة البنك" or input_str == "صوره البنك":
+        if gvarstatus("PING_PIC") is None:
+            return await edit_delete(
+                event, "**⎙ :: عزيزي المستخدم انت لم تقوم باضافه هذا الفار اصلا**"
+            )
+        delgvar("PING_PIC")
     await edit_or_reply(
         event, f"₰ هذا الفار تم حذفه بنجاح وارجاع قيمته الى القيمه الاصلية ✅"
     )
