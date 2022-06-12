@@ -5,7 +5,7 @@ from datetime import datetime
 
 from jepthon import CMD_HELP, jmthon
 from . import hmention, reply_id
-from . import PING_PIC, JEP_TEXT
+from . import PING_PIC, PING_TEXT
 """
 try:
 except:
