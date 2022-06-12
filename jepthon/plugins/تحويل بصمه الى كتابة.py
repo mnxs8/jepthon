@@ -12,7 +12,7 @@ from ..helpers import media_type
 plugin_category = "utils"
 
 
-@jmthom.ar_cmd(
+@jmthon.ar_cmd(
     pattern="شنو يكول$",
     command=("شنو يكول", plugin_category),
     info={
