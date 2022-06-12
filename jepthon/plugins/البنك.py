@@ -5,14 +5,11 @@ from datetime import datetime
 
 from jepthon import CMD_HELP, jmthon
 from . import hmention, reply_id
-from . import PING_PIC, PING_TEXT
-#"""
-#"""
+from ..sql_helper.globals import gvarstatus
 plugin_category = "tools"
 
-PING_PIC = os.environ.get("PING_PIC") or ("https://telegra.ph/file/f18d1a1433d99a465b5ae.jpg")
-
-JEP_TXT = os.environ.get("PING_TEXT") or "𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 𝑆𝐻 : @JEPTHON"
+JEP_TXT = gvarstatus("ALIVE_TEXT") or "**[ 𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 ](t.me/Jepthon)**"
+PING_PIC = gvarstatus("PING_PIC") or Config.P_PIC
 
 
 @jmthon.ar_cmd(
