@@ -31,7 +31,6 @@ async def _(event):
     await cat.delete()
     ms = (end - start).microseconds / 1000
     jmthon_caption = gvarstatus("ALIVE_TEMPLATE") or temp
-    PING_TEXT=PING_TEXT,
     caption = jmthon_caption.format(
         PING_TEXT=PING_TEXT,
         EMOJI=EMOJI,
