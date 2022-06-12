@@ -30,20 +30,35 @@ async def _(event):
     end = datetime.now()
     await cat.delete()
     ms = (end - start).microseconds / 1000
-    if PING_PIC:
-        caption = f"<b><i>{JEP_TXT}<i><b>\n<code>┏━━━━━━━┓\n┃ ✦ {ms}\n┃ ✦ <b>{hmention}</b>\n┗━━━━━━━┛"
-        await event.client.send_file(
-            event.chat_id,
-            PING_PIC,
-            caption=caption,
-            parse_mode="html",
-            reply_to=reply_to_id,
-            link_preview=False,
-            allow_cache=True,
+    jmthon_caption = gvarstatus("ALIVE_TEMPLATE") or temp
+    PING_TEXT=PING_TEXT,
+    caption = jmthon_caption.format(
+        PING_TEXT=PING_TEXT,
+        EMOJI=EMOJI,
+        ping=ms,
+    )
+if PING_PIC:
+        RR7 = [x for x in PING_PIC.split()]
+        PIC = random.choice(RR7)
+        try:
+            await event.client.send_file(
+                event.chat_id, PIC, caption=caption, reply_to=reply_to_id
+            )
+            await event.delete()
+        except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
+            return await edit_or_reply(
+                event,
+                f"**الميـديا خـطأ **\nغـير الرابـط بأستـخدام الأمـر  \n `.اضف_فار PING_PIC رابط صورتك`\n\n**لا يمـكن الحـصول عـلى صـورة من الـرابـط :-** `{PIC}`",
+            )
         )
     else:
-        await event.edit_or_reply(event, "<code>يجـب اضـافة متـغير `PING_PIC`  اولا  f<code>", "html")
+        await edit_or_reply(
+            event,
+            caption,
+        )
 
+temp = """{PING_TEXT}
+**{EMOJI} البنك ↜ :** `{ping}`"""
 #======================================================================================================================================
 CMD_HELP.update(
     {
