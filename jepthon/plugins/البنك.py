@@ -24,7 +24,6 @@ plugin_category = "utils"
 async def amireallyalive(event):
     "للتـأكد من ان البـوت يعـمـل"
     reply_to_id = await reply_id(event)
-    uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await edit_or_reply(event, "** ⌯︙يتـم التـأكـد انتـظر قليلا رجاءا**")
     end = datetime.now()
