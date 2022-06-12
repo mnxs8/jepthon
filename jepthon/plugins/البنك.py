@@ -5,10 +5,9 @@ from datetime import datetime
 
 from jepthon import CMD_HELP, jmthon
 from . import hmention, reply_id
-
+from . import PING_PIC, JEP_TEXT
 """
 try:
-    from . import PING_PIC, PING_TEXT
 except:
     pass
 """
@@ -16,7 +15,7 @@ plugin_category = "tools"
 
 PING_PIC = os.environ.get("PING_PIC") or ("https://telegra.ph/file/f18d1a1433d99a465b5ae.jpg")
 
-JM_TXT = os.environ.get("PING_TEXT") or "𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 𝑆𝐻 : @JEPTHON"
+JEP_TXT = os.environ.get("PING_TEXT") or "𝗜 𝗝𝘂𝘀𝘁 𝗔𝘀𝗸𝗲𝗱 𝗙𝗼𝗿 𝗦𝗼𝗺𝗲 𝗣𝗲𝗮𝗰𝗲 🎀 𝑆𝐻 : @JEPTHON"
 
 
 @jmthon.ar_cmd(
@@ -38,7 +37,7 @@ async def _(event):
     await cat.delete()
     ms = (end - start).microseconds / 1000
     if PING_PIC:
-        caption = f"<b><i>{JM_TXT}<i><b>\n<code>┏━━━━━━━┓\n┃ ✦ {ms}\n┃ ✦ <b>{hmention}</b>\n┗━━━━━━━┛"
+        caption = f"<b><i>{JEP_TXT}<i><b>\n<code>┏━━━━━━━┓\n┃ ✦ {ms}\n┃ ✦ <b>{hmention}</b>\n┗━━━━━━━┛"
         await event.client.send_file(
             event.chat_id,
             PING_PIC,
