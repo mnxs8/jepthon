@@ -2,9 +2,11 @@
 import os
 from datetime import datetime
 import SpeechRecognition as sr
-#import requests
+import requests
 
 from jepthon import jmthon
+
+from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import media_type
 
