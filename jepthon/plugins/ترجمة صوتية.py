@@ -130,9 +130,7 @@ async def _(event):
 
         await edit_or_reply(jepthonevent, f"خطأ:\n{e}")
 
-@jmthon.ar_cmd(pattern="احجي(?:\s|$)([\s\S]*)",
-               command=("احجي", plugin_category),
-              )
+@jmthon.ar_cmd(pattern="احجي(?:\s|$)([\s\S]*)")
 async def _(event):
     "تحويل الكلام الى نص."
     
