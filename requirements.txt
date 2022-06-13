@@ -1,7 +1,5 @@
 telethon
 pydub
-ffmpeg
-SpeechRecognition
 aiofiles
 aiohttp
 apscheduler
