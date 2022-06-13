@@ -1,5 +1,9 @@
 telethon
 pydub
+SpeechRecognition
+base64
+glob
+json
 aiofiles
 aiohttp
 apscheduler
