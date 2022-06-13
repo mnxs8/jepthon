@@ -1,4 +1,6 @@
 telethon
+pydub
+SpeechRecognition
 aiofiles
 aiohttp
 apscheduler
