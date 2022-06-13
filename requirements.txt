@@ -1,5 +1,7 @@
 telethon
+ffmpeg
 pydub
+speechrecognitionn
 base64
 glob
 json
