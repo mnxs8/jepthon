@@ -1,7 +1,6 @@
 telethon
 ffmpeg
 pydub
-speechrecognition
 base64
 glob
 json
