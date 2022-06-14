@@ -58,9 +58,10 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).seconds
     
-    string_to_show = "**النص : **`{}`".format(
-            text
+    string_to_show = "**\n**النص : **`{}`**".format(
+            text,
         )
     await jepevent.edit(string_to_show)
+    # now, remove the temporary file
     os.remove(oggfi)
     os.remove(f"{ogg}.wav")
