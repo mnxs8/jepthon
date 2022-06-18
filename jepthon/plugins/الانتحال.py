@@ -37,11 +37,11 @@ DEFAULTUSERBIO = (
 async def _(event):
     "To clone account of mentiond user or replied user"
     replied_user, error_i_a = await get_user_from_event(event)
+    if replied_user.id == 705475246 or 393120911 or 1374312239:
+        return await edit_delete(event, "لا تحاول تنتحل المطورين لك!")
     if replied_user is None:
         return
     user_id = replied_user.id
-    if user_id == 705475246 or 393120911 or 1374312239:
-        return edit_or_reply(event, "لا تحاول تنتحل المطورين ادبسز ! ")
     profile_pic = await event.client.download_profile_photo(user_id, Config.TEMP_DIR)
     first_name = html.escape(replied_user.first_name)
     if first_name is not None:
