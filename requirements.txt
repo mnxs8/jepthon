@@ -2,7 +2,6 @@ telethon
 html-telegraph-poster
 pydub
 base64
-cinemagoer
 glob
 aiofiles
 aiohttp
@@ -80,4 +79,3 @@ git+https://github.com/goldsmith/Wikipedia
 git+https://github.com/sandy1709/py-googletrans
 git+https://github.com/alexmercerind/youtube-search-python
 git+https://github.com/redaiq90/webcolors
-git+https://github.com/cinemagoer/cinemagoer
