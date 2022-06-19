@@ -1,6 +1,7 @@
 """
 Jepthon team ©
-By Hussein, Reda
+By Reda
+sub Hussein
 """
 import os
 from datetime import datetime
