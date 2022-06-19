@@ -57,10 +57,6 @@ Jepthon = "36980ed85a0d7008872784656e7ff2c8"
 )
 async def get_weather(event):  # sourcery no-metrics
     "لعرض معلومات الطقس."
-    if not Config.OPEN_WEATHER_MAP_APPID:
-        return await edit_or_reply(
-            event, "- يجب الحصول على فار الطقس من الرابط https://openweathermap.org/ اولا"
-        )
     input_str = "".join(event.text.split(maxsplit=1)[1:])
     CITY = gvarstatus("DEFCITY") or "Baghdad" if not input_str else input_str
     timezone_countries = {
