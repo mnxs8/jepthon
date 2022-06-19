@@ -1,7 +1,7 @@
 import os.path
 from jepthon import jmthon
 from ..core.managers import edit_delete, edit_or_reply
-
+#By Reda
 def isEx(path):
      spath = str(path)
      return os.path.exists(f"jepthon/plugins/{spath}.py")
