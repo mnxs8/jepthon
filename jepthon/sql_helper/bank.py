@@ -16,8 +16,8 @@ BASE = declarative_base()
 engine = create_engine(reda, poolclass=NullPool)
 BASE.metadata.bind = engine
 BASE.metadata.create_all(engine)
-
-#by Team Jepthon
+#edited By reda
+#by Jepthon team
 #ممنوع اخذ الملف
 class bankc(BASE):
     __tablename__ = "bank"
