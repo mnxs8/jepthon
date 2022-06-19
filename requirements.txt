@@ -2,6 +2,7 @@ telethon
 html-telegraph-poster
 pydub
 base64
+cinemagoer
 glob
 aiofiles
 aiohttp
