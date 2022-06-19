@@ -41,7 +41,7 @@ def celsius(c):
 def sun(unix, ctimezone):
     return datetime.fromtimestamp(unix, tz=ctimezone).strftime("%I:%M %p")
 
-
+Jepthon = "36980ed85a0d7008872784656e7ff2c8"
 @jmthon.ar_cmd(
     pattern="الطقس(?:\s|$)([\s\S]*)",
     command=("الطقس", plugin_category),
@@ -79,7 +79,7 @@ async def get_weather(event):  # sourcery no-metrics
             except KeyError:
                 return await edit_or_reply(event, "- اسم هذه المدينه خطأ تاكد بشكل صحيح")
             CITY = newcity[0].strip() + "," + countrycode.strip()
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={Config.OPEN_WEATHER_MAP_APPID}"
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={Jepthon}"
     async with aiohttp.ClientSession() as _session:
         async with _session.get(url) as request:
             requeststatus = request.status
