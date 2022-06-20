@@ -63,25 +63,21 @@ async def d(message):
         await message.client.send_message(message.chat_id, "تم حذف حسابك المصرفي")
 
 @jmthon.ar_cmd(
-    pattern="البنك(?:\s|$)([\s\S]*)",
-    command=("البنك", plugin_category),
+    pattern="انشاء حساب(?:\s|$)([\s\S]*)",
+    command=("انشاء حساب", plugin_category),
 )
 async def start(event):
     me = await event.client.get_me()
-    sta = await edit_or_reply(event, f"""<strong>
-
-
+    sta = await edit_or_reply(event, f"""</strong>
 
 👋  {me.first_name} مرحبًا
  ━━━━━━━━━━━━━━━━━
-- يمكنك استعمال الاوامر في اي مكان
+- لأنشاء حساب اختر احد المصاريف الاتية
 
-- المصرف. 
+- .انشاء حساب جيبثون الاسلامي  
 
-- لاضهار المساعدة فيما يخص المصرف
+- .انشاء حساب الرافدين
  ━━━━━━━━━━━━━━━━━
-ارسل .انشاء حساب
-لانشاء حساب في المصرف
 
 </strong>""",parse_mode="html")
 
@@ -129,7 +125,7 @@ async def ga(message):
     ms = message.text
     acc = get_bank(mee.id)
  
-    if ms == ".المصرف" or ms == ".البانك" or ms == ".مصرف":
+    if ms == ".المصرف" or ms == ".البنك" or ms == ".مصرف":
 
 
         help = """
@@ -334,36 +330,3 @@ async def bankar(message):
          return await edit_or_reply(message, "لا يوجد هكذا مصرِف !")
     add_bank(mee.id, mee.first_name, 50, bankn)
     cbs = await edit_or_reply(message,f"<strong>تم انشاء حساب مصرفي بالمعلومات التالية:\nاسم صاحب الحساب:{mee.first_name}|\nايدي الحساب:{mee.id}|\nاسم المصرف:{bankn}|\nالاموال المودعة:50$</strong>", parse_mode="html")
-
-
-@jmthon.ar_cmd(pattern="تحويل (.*)")
-
-async def transmoney(event):
-    me = await event.client.get_me()
-    inp = event.pattern_match.group(1)
-    user, custom = await get_user_from_event(event)
-    acc = get_bank(me.id)
-    accu = get_bank(user.id)
-    if inp is None:
-        return await edit_delete(event, "ادخل المبلغ الذي تريد تحويله")
-    if not user:
-        return await edit_delete(event, "يجب ان ترد على الشخص الذي تريد ان تحول له")
-    if acc is None:
-        return await edit_delete(event, "ليس لديك حساب مصرفي للتحويل")
-    if accu is None:
-        return await edit_delete(event, "الشخص الذي تحاول التحويل له لا يملك حساب مصرفي")
-    if "-" in inp:
-        inp = inp.replace("-", "")
-    if int(inp) > int(acc.balance):
-        return await edit_delete(event, "انت لا تملك هذا القدر من الاموال لتحويله")
-    if int(inp) < 2000:
-        return await edit_delete(event, "لا يمكنك تحويل مبلغ اقل من 2000$")
-    if int(inp) > int(acc.balance):
-        return await edit_delete(event, "انت لا تملك هذا القدر من الاموال لتحويله")
-    if int(inp) < 0:
-        return await edit_delete(event, "ادخل قيمة صحيحة للتحويل!")
-    tra = int(acc.balance) - int(inp)
-    rec = int(accu.balance) + int(inp)
-    update_bank(me.id, tra)
-    update_bank(user.id, rec)
-    don = await edit_or_reply(event, f"تم تحويل {inp} لحساب [{user.first_name}](tg://user?id={user.id})")
