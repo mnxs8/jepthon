@@ -181,5 +181,5 @@ async def jepThe(theme):
 async def jepios(ios):
   rl = random.randint(2,101)
   url = f"https://t.me/ThemeJep/{rl}"
-  await ios.client.send_message(ios.chat_id,url,caption="⌯︙BY : @JEPTHON ثيمات للايفون",parse_mode="html")
+  await ios.client.send_message(ios.chat_id,url"⌯︙BY : @JEPTHON ثيمات للايفون",parse_mode="html")
   await ios.delete()
