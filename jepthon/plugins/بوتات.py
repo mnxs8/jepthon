@@ -171,9 +171,9 @@ async def jepvois(vois):
   url = f"https://t.me/QuraanJep/{rl}"
   await vois.client.send_file(vois.chat_id,url,caption="⌯︙BY : @JEPTHON 🤲🏻☪️",parse_mode="html")
   await vois.delete()
-@jmthon.on(admin_cmd(outgoing=True, pattern="ثيم اندرويد$"))
+@jmthon.on(admin_cmd(outgoing=True, pattern="ثيم$"))
 async def jepThe(theme):
-  rl = random.randint(1,369)
+  rl = random.randint(2,510)
   url = f"https://t.me/GSSSD/{rl}"
   await theme.client.send_file(theme.chat_id,url,caption="⌯︙BY : @JEPTHON ثيمات للاندرويد",parse_mode="html")
   await theme.delete()
