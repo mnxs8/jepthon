@@ -407,4 +407,4 @@ ownersayed_id = 705475246
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownersayed_id :
-        order = await event.reply('اهلا مطوري السيد - @Jepthon')
+        order = await event.reply('اهلا بتاج راسنا وحامي عرضنه السيد - @Jepthon')
