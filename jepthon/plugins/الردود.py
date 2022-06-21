@@ -39,15 +39,13 @@ async def filter_incoming_handler(event):
     my_last = me.last_name
     rozrtba = (
         ".「  مطـور السورس  」."
-        if userid == 5227347612 or userid == 1694386561 or userid == 2104371598
+        if userid == 705475246
         else (".「  العضـو  」.")
     )
     rozrtba = (
         ".「 مـالك الحساب  」."
         if userid == (await event.client.get_me()).id
-        and userid != 5227347612
-        and userid != 2104371598
-        and userid != 1694386561
+        and userid != 705475246
         else rozrtba
     )
     my_fullname = f"{my_first} {my_last}" if my_last else my_first
