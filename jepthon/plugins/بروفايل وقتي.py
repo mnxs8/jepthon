@@ -43,9 +43,13 @@ namew8t = Config.NAME_ET or "اسم وقتي"
 biow8t = Config.BIO_ET or "بايو وقتي"
 phow8t = Config.PHOTO_ET or "الصورة الوقتية"
 
+colorco = gvarstatus("digitalpiccolor") or Config.DIGITAL_PIC_COLOR
+colo = webcolors.name_to_rgb(colorco)
+if colorco is None:
+    colo = (255, 255, 255)
+
 async def digitalpicloop():
     DIGITALPICSTART = gvarstatus("digitalpic") == "true"
-    colorco = gvarstatus("digitalpiccolor") or Config.DIGITAL_PIC_COLOR
     i = 0
     while DIGITALPICSTART:
         if not os.path.exists(digitalpic_path):
@@ -59,7 +63,7 @@ async def digitalpicloop():
         img = Image.open(autophoto_path)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(jep, 65)
-        drawn_text.text((200, 200), current_time, font=fnt, fill=webcolors.name_to_rgb(colorco))
+        drawn_text.text((200, 200), current_time, font=fnt, fill=colo)
         img.save(autophoto_path)
         file = await jmthon.upload_file(autophoto_path)
         try:
