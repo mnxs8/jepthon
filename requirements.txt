@@ -1,4 +1,7 @@
 telethon
+bs4
+tgcrypto
+pymongo[srv]
 html-telegraph-poster
 pydub
 base64
