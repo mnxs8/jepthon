@@ -175,5 +175,5 @@ async def jepvois(vois):
 async def jepThe(theme):
   rl = random.randint(2,510)
   url = f"https://t.me/GSSSD/{rl}"
-  await theme.client.send_file(theme.chat_id,url,caption="⌯︙BY : @JEPTHON ثيمات للاندرويد",parse_mode="html")
+  await theme.client.send_file(theme.chat_id,url,caption="⌯︙THEME BY : @JEPTHON 🎊",parse_mode="html")
   await theme.delete()
