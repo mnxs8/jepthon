@@ -16,7 +16,7 @@ import base64
 from jepthon import jmthon 
 from ..Config import Config
 
-@jmthon.ar_cmd(func=lambda m:'reda')
+@jmthon.ar_cmd(func=lambda m:'jepthon')
 async def tiktok_dl(message):
     ms = message.text
     if ".تك https://vm.tiktok.com/" in ms:
