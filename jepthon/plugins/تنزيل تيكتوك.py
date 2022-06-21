@@ -63,9 +63,9 @@ async def tiktok_dl(message):
                         percent = 100
                     if show == 1:
                         try:
-                            await a.edit(f'__**URL :**__ __{message.text}__\n'
-                               f'__**Total Size :**__ __{total_size} MB__\n'
-                               f'__**Downloaded :**__ __{percent}%__\n',
+                            await a.edit(f'__**الرابط :**__ __{message.text}__\n'
+                               f'__**مدة الفيديو:**__ __{total_size} MB__\n'
+                               f'__**التحميل:**__ __{percent}%__\n',
                                disable_web_preview=False)
                         except:
                             pass
