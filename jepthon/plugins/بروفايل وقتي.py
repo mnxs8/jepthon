@@ -34,7 +34,6 @@ autopic_path = os.path.join(os.getcwd(), "jepthon", "original_pic.png")
 digitalpic_path = os.path.join(os.getcwd(), "jepthon", "digital_pic.png")
 autophoto_path = os.path.join(os.getcwd(), "jepthon", "photo_pfp.png")
 
-
 digitalpfp = Config.DIGITAL_PIC or "https://telegra.ph/file/63a826d5e5f0003e006a0.jpg"
 lMl10l = Config.TIME_JEP or ""
 jep = Config.DEFAULT_PIC or "jepthon/helpers/styles/PaybAck.ttf"
@@ -60,7 +59,7 @@ async def digitalpicloop():
         img = Image.open(autophoto_path)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(jep, 65)
-        drawn_text.text((200, 200), current_time, font=fnt, fill=(255, 255, 255))
+        drawn_text.text((200, 200), current_time, font=fnt, fill=(255, 255, 255) or webcolors.name_to_rgb(colorco))
         img.save(autophoto_path)
         file = await jmthon.upload_file(autophoto_path)
         try:
