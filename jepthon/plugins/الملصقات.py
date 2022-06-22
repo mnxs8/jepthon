@@ -341,11 +341,11 @@ async def kang(args):  # sourcery no-metrics
                         emoji = attribute.alt
                         emojibypass = True
             else:
-                catevent = await edit_or_reply(args, "__⌛ Downloading..__")
+                catevent = await edit_or_reply(args, "__⌛ جارِ التحميل عزيزي..__")
                 sticker = await animator(message, args, catevent)
                 await edit_or_reply(catevent, f"`{random.choice(KANGING_STR)}`")
         else:
-            await edit_delete(args, "`Unsupported File!`")
+            await edit_delete(args, "`الملف غير مدعوم!`")
             return
     else:
         await edit_delete(args, "`لا يمكنني اخذ هذا الملصق...`")
@@ -413,7 +413,7 @@ async def kang(args):  # sourcery no-metrics
                 parse_mode="md"
             )
         else:
-            await catevent.edit("`Brewing a new Pack...`")
+            await catevent.edit("`جارِ انشاء حزمة جديد ياورده...`")
             async with args.client.conversation("@Stickers") as conv:
                 otherpack, packname, emoji = await newpacksticker(
                     catevent,
@@ -435,16 +435,16 @@ async def kang(args):  # sourcery no-metrics
             if otherpack:
                 await edit_delete(
                     catevent,
-                    f"`Sticker kanged to a Different Pack !\
-                    \nAnd Newly created pack is` [here](t.me/addstickers/{packname}) `and emoji for the kanged sticker is {emoji}`",
+                    f"`تم اخذ الملصق بنجاح !\
+                    \nوهاي الحزمه مالتك` [here](t.me/addstickers/{packname}) `وهذا الايموجي مال الملصق {emoji}`",
                     parse_mode="md",
                     time=10,
                 )
             else:
                 await edit_delete(
                     catevent,
-                    f"`Sticker kanged successfully!\
-                    \nYour Pack is` [here](t.me/addstickers/{packname}) `and emoji for the kanged sticker is {emoji}`",
+                    f"`تم اخذ الملصق مثل الورد!\
+                    \nوهاي الحزمه مالتك` [here](t.me/addstickers/{packname}) `وهذا الايموجي مال الملصق {emoji}`",
                     parse_mode="md",
                     time=10,
                 )
