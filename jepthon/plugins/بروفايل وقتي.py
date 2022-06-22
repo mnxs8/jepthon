@@ -44,9 +44,9 @@ biow8t = Config.BIO_ET or "بايو وقتي"
 phow8t = Config.PHOTO_ET or "الصورة الوقتية"
 
 colorco = gvarstatus("digitalpiccolor") or Config.DIGITAL_PIC_COLOR
-colo = webcolors.name_to_rgb(colorco)
 if colorco is None:
-    colo = (255, 255, 255)
+    colorco = "white"
+colo = webcolors.name_to_rgb(colorco)
 
 async def digitalpicloop():
     DIGITALPICSTART = gvarstatus("digitalpic") == "true"
