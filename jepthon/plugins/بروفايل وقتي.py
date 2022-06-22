@@ -43,12 +43,11 @@ namew8t = Config.NAME_ET or "اسم وقتي"
 biow8t = Config.BIO_ET or "بايو وقتي"
 phow8t = Config.PHOTO_ET or "الصورة الوقتية"
 
-colorco = gvarstatus("digitalpiccolor") or Config.DIGITAL_PIC_COLOR
-if colorco is None:
-    colorco = "white"
-colo = webcolors.name_to_rgb(colorco)
-
 async def digitalpicloop():
+    colorco = gvarstatus("digitalpiccolor") or Config.DIGITAL_PIC_COLOR
+    if colorco is None:
+        colorco = "white"
+    colo = webcolors.name_to_rgb(colorco)
     DIGITALPICSTART = gvarstatus("digitalpic") == "true"
     i = 0
     while DIGITALPICSTART:
