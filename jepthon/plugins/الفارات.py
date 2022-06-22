@@ -185,7 +185,7 @@ async def variable(var):
         heroku_var[variable] = vra
 
 
-@jmthon.ar_cmd(pattern="ازالة (.*)")
+@jmthon.ar_cmd(pattern="محو (.*)")
 async def variable(event):
     if Config.HEROKU_API_KEY is None:
         return await edit_delete(
