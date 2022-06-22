@@ -165,13 +165,7 @@ async def newpacksticker(
         stfile.seek(0)
         await conv.send_file(stfile, force_document=True)
     rsp = await conv.get_response()
-    if not verify_cond(EMOJI_SEN, rsp.text):
-        await catevent.edit(
-            f"فشل اضافة الملصق ، استخدم بوت الملصقات @Stickers لأضافة الملصق يدويا.\n**خطا :**{rsp}"
-        )
-        if not pkang:
-            return None, None, None
-        return None, None
+    asyncio.sleep(1)
     await conv.send_message(emoji)
     await args.client.send_read_acknowledge(conv.chat_id)
     await conv.get_response()
@@ -256,13 +250,6 @@ async def add_to_pack(
         stfile.seek(0)
         await conv.send_file(stfile, force_document=True)
     rsp = await conv.get_response()
-    if not verify_cond(EMOJI_SEN, rsp.text):
-        await catevent.edit(
-            f"⌯︙فشل اضافة الملصق ، استخدم بوت الملصقات @Stickers لأضافة الملصق يدويا.\n**خطأ :**{rsp}"
-        )
-        if not pkang:
-            return None, None
-        return None, None
     await conv.send_message(emoji)
     await args.client.send_read_acknowledge(conv.chat_id)
     await conv.get_response()
@@ -420,12 +407,10 @@ async def kang(args):  # sourcery no-metrics
                 )
             if packname is None:
                 return
-            await edit_delete(
-                catevent,
+            await catevent.edit(
                 f"`تم اخذ الملصق بنجاح!\
                     \nهذه هي الحزمه الخاصه بك` [هنا](t.me/addstickers/{packname}) `والايموجي الخاص بلملصق هو {emoji}`",
-                parse_mode="md",
-                time=10,
+                parse_mode="md"
             )
         else:
             await catevent.edit("`Brewing a new Pack...`")
