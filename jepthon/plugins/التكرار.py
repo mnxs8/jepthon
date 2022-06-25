@@ -108,7 +108,7 @@ async def spam_function(event, jepthon, jmthon, sleeptimem, sleeptimet, DelaySpa
             )
 
 
-@sbb_b.ar_cmd(pattern="كرر (.*)")
+@jmthon.ar_cmd(pattern="كرر (.*)")
 async def spammer(event):
     jepthon = await event.get_reply_message()
     jmthon = ("".join(event.text.split(maxsplit=1)[1:])).split(" ", 1)
