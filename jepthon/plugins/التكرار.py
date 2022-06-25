@@ -9,7 +9,7 @@ from telethon.utils import get_display_name
 from jepthon import jmthon
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.tools import media_type
-from ..helpers.utils import _catbutils
+from ..helpers.utils import _catutils
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from . import BOTLOG, BOTLOG_CHATID
 
@@ -34,7 +34,7 @@ async def spam_function(event, jepthon, jmthon, sleeptimem, sleeptimet, DelaySpa
             jepthon = await event.client.send_file(
                 event.chat_id, jepthon, caption=jepthon.text
             )
-            await _sbb_butils.unsavegif(event, jepthon)
+            await _catutils.unsavegif(event, jepthon)
             await asyncio.sleep(sleeptimem)
         if BOTLOG:
             if DelaySpam is not True:
@@ -64,7 +64,7 @@ async def spam_function(event, jepthon, jmthon, sleeptimem, sleeptimet, DelaySpa
                 )
 
             jepthon = await event.client.send_file(BOTLOG_CHATID, jepthon)
-            await _catbutils.unsavegif(event, jepthon)
+            await _catutils.unsavegif(event, jepthon)
         return
     elif event.reply_to_msg_id and jepthon.text:
         spam_message = jepthon.text
@@ -155,7 +155,7 @@ async def stickerpack_spam(event):
     hmm = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
     try:
         stickerset_attr = reply.document.attributes[1]
-        sbb_bevent = await edit_or_reply(
+        catevent = await edit_or_reply(
             event, "**⌔∮ جاري إحضار تفاصيل حزمة الملصقات، يرجى الإنتظار قليلا  ⏱**"
         )
     except BaseException:
