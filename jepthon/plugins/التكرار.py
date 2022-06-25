@@ -268,4 +268,4 @@ async def stopspamrz(event):
     if gvarstatus("spamwork") is not None and gvarstatus("spamwork") == "true":
         delgvar("spamwork")
         return await edit_delete(event, "**⌔∮ تم بنجاح ايقاف التكرار **")
-    return await edit_delete(event, "**⌔∮ عذرا لم يتم تفعيل التكرار بالاصل")
+    return await edit_delete(event, "**⌔∮ عذرا لم يتم تفعيل التكرار بالاصل**")
