@@ -471,7 +471,7 @@ async def jepthonpkg(_):
         mul = get_input_document(i)
         stiks.append(
             types.InputStickerSetItem(
-                document=jmt,
+                document=mul,
                 emoji=(i.attributes[1]).alt,
             )
         )
