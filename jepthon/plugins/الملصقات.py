@@ -489,7 +489,7 @@ async def jepthonpkg(_):
         LOGS.exception(er)
         return await edit_or_reply(_, str(er))
     await edit_or_reply(
-        _, f"**- تم اخذ الحزمه بنجاح ✓ \nالحزمه  → [اضغط هنا](https://t.me/addstickers/{jmthon_roz.set.short_name})**")
+        _, f"**- تم اخذ الحزمه بنجاح ✓ \nالحزمه  → [اضغط هنا](https://t.me/addstickers/{jepthon_Jep.set.short_name})**")
 
 @jmthon.ar_cmd(
     pattern="معلومات_الملصق$",
