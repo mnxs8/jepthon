@@ -451,16 +451,16 @@ async def kang(args):  # sourcery no-metrics
 
 
 @jmthon.on(admin_cmd(pattern="حزمة"))
-async def jmthonpkg(_):
-    roz = await _.get_reply_message()
-    if not roz:
+async def jepthonpkg(_):
+    Jep = await _.get_reply_message()
+    if not Jep:
         return await edit_or_reply(_, "**- يجب عليك الرد على حزمة  .**")
     if len(_.text) > 9:
         _packname = _.text.split(" ", maxsplit=1)[1]
     else:
         _packname = f"{_.sender_id}"
-    _id = roz.media.document.attributes[1].stickerset.id
-    _hash = roz.media.document.attributes[1].stickerset.access_hash
+    _id = Jep.media.document.attributes[1].stickerset.id
+    _hash = Jep.media.document.attributes[1].stickerset.access_hash
     _get_stiks = await _.client(
         functions.messages.GetStickerSetRequest(
             stickerset=types.InputStickerSetID(id=_id, access_hash=_hash)
@@ -468,7 +468,7 @@ async def jmthonpkg(_):
     )
     stiks = []
     for i in _get_stiks.documents:
-        jmt = get_input_document(i)
+        mul = get_input_document(i)
         stiks.append(
             types.InputStickerSetItem(
                 document=jmt,
@@ -477,7 +477,7 @@ async def jmthonpkg(_):
         )
     try:
         short_name = (await _.client(SuggestShortNameRequest(_packname))).short_name
-        jmthon_roz = await bot(
+        jepthon_Jep = await bot(
             functions.stickers.CreateStickerSetRequest(
                 user_id=_.sender_id,
                 title=_packname,
