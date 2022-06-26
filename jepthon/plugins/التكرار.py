@@ -134,7 +134,8 @@ async def spammer(event):
     reply = await event.get_reply_message()
     input_str = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
     try:
-        sleeptimet = sleeptimem = float(input_str[0])
+        sleeptimet = sleeptimem = int(input_str[0])
+        sleeptimet = sleeptimet * 60
     except Exception:
         return await edit_delete(
             event, "⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️"
