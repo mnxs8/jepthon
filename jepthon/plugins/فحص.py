@@ -37,7 +37,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "⿻┊‌‎"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**[ 𝗝𝗘𝗣𝗧𝗛𝗢𝗡 𝗜𝗦 𝗪𝗢𝗥𝗞𝗜𝗡𝗚 ✓ ](t.me/Jepthon)**"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**父[ 𝗝𝗘𝗣𝗧𝗛𝗢𝗡 𝗜𝗦 𝗪𝗢𝗥𝗞𝗜𝗡𝗚 ✓ ](t.me/Jepthon)父**"
     RR7_IMG = gvarstatus("ALIVE_PIC") or Config.A_PIC
     jmthon_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = jmthon_caption.format(
@@ -77,4 +77,4 @@ temp = """{ALIVE_TEXT}
 ‌‎{EMOJI}‌‎TelethoN 𖠄 {telever} ٫
 ‌‎{EMOJI}‌‎UpTimE 𖠄 {uptime} ٫
 ‌‎{EMOJI}‌‎‌‎PinG 𖠄 {ping} ٫
-{EMOJI}‌‎Jepthon Userbot 𖠄"""
+𖠄 𝙹𝙴𝙿𝚃𝙷𝙾𝙽 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𖠄"""
