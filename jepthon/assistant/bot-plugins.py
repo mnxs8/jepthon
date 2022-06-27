@@ -241,10 +241,6 @@ async def op(event):
       ]
     ]         
     await event.reply("لأستخدام ميزة اختراق كود تيرمكس الخاص بسورس جيبثون يجب عليك ان تنصب السورس اولاً", buttons=Jepthon)
-    if event.sender_id == bot.uid:
-        await tgbot.send_message(
-            vent,
-            message=f"ياهلا بلمالك مالتي ❤️",
  
 @tgbot.on(events.NewMessage(pattern="/hack", func = lambda e: e.sender_id == bot.uid))
 async def start(event):
