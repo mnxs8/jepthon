@@ -10,6 +10,7 @@ from ..Config import Config
 api_id = os.environ.get("APP_ID")
 import os, asyncio, re
 from os import system
+from ..core import check_owner
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
 api_hash = os.environ.get("API_HASH")
 
@@ -264,7 +265,8 @@ async def start(event):
     ]
     await x.send_message(f"اختر ماتريد فعله مع الجلسة \n\n{menu}", buttons=keyboard)
     
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"A") e: e.sender_id == bot.uid))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"A")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
