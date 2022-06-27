@@ -31,7 +31,7 @@ async def _(event):
         
 @borg.on(
     admin_cmd(
-       pattern="اكس او$"
+       pattern="هكر$"
     )
 )
 # كتابة وتعديل فريق جـيبثون  #@RR7PP
@@ -39,7 +39,7 @@ async def gamez(event):
     if event.fwd_from:
         return
     jmusername = "@Hs_sbot"
-    uunzz = "hack"
+    uunzz = "/hack"
     if event.reply_to_msg_id:
         await event.get_reply_message()
     tap = await bot.inline_query(jmusername, uunzz)
