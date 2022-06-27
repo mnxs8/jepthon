@@ -1,6 +1,7 @@
 from . import *
 from jepthon import bot
-# COPYRIGHT Â© 2022 BY ANES/@N_B_1 ðŸ”¥
+#حقوق جيبثون ممنوع تاخذ الملف من دون علم الصاحب @Jepthon
+# By @lMl10l
 # Edited By reda
 from telethon import events, functions, types, Button
 from datetime import timedelta
