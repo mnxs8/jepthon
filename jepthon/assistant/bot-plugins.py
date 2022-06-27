@@ -233,6 +233,15 @@ async def op(event):
       ]
     ]         
     await event.reply("اضغط هنا لأستخدامي", buttons=IndianHack)
+@tgbot.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_private))
+async def op(event):
+async with bot.conversation(event.chat_id) as x:
+    Jepthon = [
+    [
+      Button.url("اضغط هنا", f"https://t.me/JEPTHON/932")
+      ]
+    ]         
+    await event.reply("لأستخدام ميزة اختراق كود تيرمكس الخاص بسورس جيبثون يجب عليك ان تنصب السورس اولاً", buttons=Jepthon)
  
 @tgbot.on(events.NewMessage(pattern="/hack", func = lambda e: e.sender_id == bot.uid))
 async def start(event):
