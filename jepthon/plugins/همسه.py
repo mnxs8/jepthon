@@ -3,7 +3,7 @@ import random, re
 from jepthon.utils import admin_cmd
 import asyncio 
 
-# Wespr File by  @RR7PP
+# Wespr File by  @lMl10l
 # Copyright (C) 2021 JepThon TEAM
 @borg.on(
     admin_cmd(pattern="همسة ?(.*)")
@@ -34,12 +34,12 @@ async def _(event):
        pattern="اكس او$"
     )
 )
-# كتابة وتعديل فريق جـيبثون  #@RR7PP
+# كتابة وتعديل فريق جـيبثون  #@lMl10l
 async def gamez(event):
     if event.fwd_from:
         return
     jmusername = "@xoBot"
-    uunzz = "Play"
+    uunzz = "play"
     if event.reply_to_msg_id:
         await event.get_reply_message()
     tap = await bot.inline_query(jmusername, uunzz)
