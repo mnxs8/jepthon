@@ -5,14 +5,10 @@ from googletrans import LANGUAGES, Translator
 from jepthon import jmthon
 
 from ..core.managers import edit_delete, edit_or_reply
-from ..sql_helper.globals import addgvar, gvarstatus
-from . import BOTLOG, BOTLOG_CHATID, deEmojify
+from . import deEmojify
 
-plugin_category = "utils"
 
-# Copyright (C) 2021 JepThon TEAM
-# FILES WRITTEN BY  @RR7PP
-
+# https://github.com/ssut/py-googletrans/issues/234#issuecomment-722379788
 async def getTranslate(text, **kwargs):
     translator = Translator()
     result = None
@@ -25,31 +21,18 @@ async def getTranslate(text, **kwargs):
     return result
 
 
-@jmthon.ar_cmd(
-    pattern="ترجمه ([\s\S]*)",
-    command=("ترجمه", plugin_category),
-    info={
-        "header": "To translate the text to required language.",
-        "note": "For langugage codes check [this link](https://bit.ly/2SRQ6WU)",
-        "usage": [
-            "{tr}tl <language code> ; <text>",
-            "{tr}tl <language codes>",
-        ],
-        "examples": "{tr}tl te ; Catuserbot is one of the popular bot",
-    },
-)
+@sbb_b.ar_cmd(pattern="ترجمة ([\s\S]*)")
 async def _(event):
-    "To translate the text."
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         text = previous_message.message
-        lan = input_str or "en"
+        lan = input_str or "ar"
     elif ";" in input_str:
         lan, text = input_str.split(";")
     else:
         return await edit_delete(
-            event, "⌁︙للترجمه يجـب الـرد على الرساله واكتب .ترجمه ar", time=5
+            event, "`.ترجمة + كود الترجمه` بالرد على رساله", time=5
         )
     text = deEmojify(text.strip())
     lan = lan.strip()
@@ -57,8 +40,8 @@ async def _(event):
     try:
         translated = await getTranslate(text, dest=lan)
         after_tr_text = translated.text
-        output_str = f"⌁︙تمت الترجمه مـن  : {LANGUAGES[translated.src].title()}\n ⌯︙الـى {LANGUAGES[lan].title()} \
-                \n\n{after_tr_text}"
+        output_str = f"**تم الترجمه من  {LANGUAGES[translated.src].title()} الى {LANGUAGES[lan].title()}**\
+                \n`{after_tr_text}`"
         await edit_or_reply(event, output_str)
     except Exception as exc:
-        await edit_delete(event, f"**خـطأ:**\n`{str(exc)}`", time=5)
+        await edit_delete(event, f"**خطأ:**\n`{exc}`", time=5)
