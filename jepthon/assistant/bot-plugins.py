@@ -264,7 +264,7 @@ async def start(event):
     ]
     await x.send_message(f"اختر ماتريد فعله مع الجلسة \n\n{menu}", buttons=keyboard)
     
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"A")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"A") e: e.sender_id == bot.uid))
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
