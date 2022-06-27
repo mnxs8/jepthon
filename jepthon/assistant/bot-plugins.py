@@ -1,8 +1,8 @@
 from . import *
 from jepthon import bot
 #حقوق جيبثون ممنوع تاخذ الملف من دون علم الصاحب @Jepthon
-# By @lMl10l
-# Edited By reda
+# By Reda
+# Translated By @lMl10l
 from telethon import events, functions, types, Button
 from datetime import timedelta
 import asyncio
