@@ -223,7 +223,7 @@ keyboard = [
 
       
        
-@tgbot.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_group e.sender_id == bot.uid))
+@tgbot.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_group))
 async def op(event):
     busr = Bot_Username.replace("@", "")
     IndianHack = [
