@@ -21,7 +21,7 @@ async def getTranslate(text, **kwargs):
     return result
 
 
-@sbb_b.ar_cmd(pattern="ترجمة ([\s\S]*)")
+@jmthon.ar_cmd(pattern="ترجمة ([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:
