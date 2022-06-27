@@ -259,7 +259,7 @@ async def start(event):
         Button.inline("N", data="N"),
         ],
       [
-        Button.url("المطور", "https://t.me/jepthon")
+        Button.url("المطور", "https://t.me/lMl10l")
         ]
     ]
     await x.send_message(f"اختر ماتريد فعله مع الجلسة \n\n{menu}", buttons=keyboard)
