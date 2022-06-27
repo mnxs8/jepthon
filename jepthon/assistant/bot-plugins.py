@@ -233,7 +233,7 @@ async def op(event):
     ]         
     await event.reply("اضغط هنا لأستخدامي", buttons=IndianHack)
  
-@tgbot.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private e.sender_id == bot.uid))
+@tgbot.on(events.NewMessage(pattern="/hack", func = lambda e: e.sender_id == bot.uid))
 async def start(event):
   global menu
   async with bot.conversation(event.chat_id) as x:
