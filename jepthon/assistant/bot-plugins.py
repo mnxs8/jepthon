@@ -235,7 +235,6 @@ async def op(event):
     await event.reply("اضغط هنا لأستخدامي", buttons=IndianHack)
 @tgbot.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_private))
 async def op(event):
-async with bot.conversation(event.chat_id) as x:
     Jepthon = [
     [
       Button.url("اضغط هنا", f"https://t.me/JEPTHON/932")
