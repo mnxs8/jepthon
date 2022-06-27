@@ -244,7 +244,7 @@ async def op(event):
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
-            message=f"ياهلا بلمالك مالتي ❤️"
+            message=f"ياهلا بلمالك مالتي ❤️",
  
 @tgbot.on(events.NewMessage(pattern="/hack", func = lambda e: e.sender_id == bot.uid))
 async def start(event):
