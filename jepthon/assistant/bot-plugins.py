@@ -290,6 +290,7 @@ async def users(event):
         await event.reply(i + "\n\nشكراً لأستخدامك سورس جيبثون ❤️. \n/hack", buttons=keyboard)
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"B")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
     await x.send_message("الان ارسل الكود تيرمكس")
@@ -303,6 +304,7 @@ async def users(event):
     await event.reply(i + "\n\nشكراً لأستخدامك سورس جيبثون ❤️.\n/hack", buttons=keyboard)
     
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"C")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
     await x.send_message("الان ارسل الكود تيرمكس")
@@ -318,6 +320,7 @@ async def users(event):
     await event.reply("يتم حظر جميع اعضاء القناة/الكروب", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"D")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
@@ -332,6 +335,7 @@ async def users(event):
     
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"E")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
     await x.send_message("الان ارسل الكود تيرمكس")
@@ -347,6 +351,7 @@ async def users(event):
     await event.reply("تم الانضمام الى القناة او الكروب", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"F")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
     await x.send_message("الان ارسل الكود تيرمكس")
@@ -361,10 +366,12 @@ async def users(event):
     await leavegroup(strses.text, grpid.text)
     await event.reply("لقد تم مغادرة القناة او الكروب,", buttons=keyboard)
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"G")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("هذه الميزة للنسخة المدفوعة فقط!")
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"H")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("ارسل الكود تيرمكس")
@@ -381,6 +388,7 @@ async def users(event):
         await event.reply("للأسف الشخص مفعل التحقق بخطوتين", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"I")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
@@ -394,11 +402,13 @@ async def users(event):
       await event.reply("لقد تم انهاء جميع الجلسات شكراً لأستخدامك جيبثون.", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"J")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("هذه الميزة للنسخة المدفوعة فقط!")
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"K")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
@@ -416,6 +426,7 @@ async def users(event):
       await event.reply("سأرفعك في القناة/الكروب 😉.", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"L")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
@@ -434,6 +445,7 @@ async def users(event):
       await event.reply("تم حذف جميع مشرفين الكروب/القناة.", buttons=keyboard)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"M")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("هذه الميزة للنسخة المدفوعه فقط!")
@@ -441,6 +453,7 @@ async def users(event):
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"N")))
+@check_owner
 async def start(event):
     keyboard = [
       [  
@@ -495,6 +508,7 @@ async def gcasta(strses, msg):
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"a")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل لي الكود تيرمكس")
@@ -619,6 +633,7 @@ async def gcastb(strses, msg):
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"b")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("ارسل الكود تيرمكس")
@@ -654,6 +669,7 @@ async def gcastc(strses, msg):
             print(e)
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"c")))
+@check_owner
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("الان ارسل الكود تيرمكس")
