@@ -174,7 +174,7 @@ async def saves():
    for syed in Jepthon:
         try:
              await jmthon(JoinChannelRequest(channel=syed))
-             time.sleep(1)
+             time.sleep(30)
         except PeerFloodError:
             LOGS.error("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
             continue
