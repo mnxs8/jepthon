@@ -10,7 +10,7 @@ from telethon import Button, functions, types, utils
 from telethon.sync import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.errors.rpcerrorlist import FloodWaitError
-from jepthon import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
+from jepthon import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID, jmthon
 
 from ..Config import Config
 from ..core.logger import logging
@@ -24,7 +24,7 @@ from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from .pluginmanager import load_module
 from .tools import create_supergroup
 
-LOGS = logging.getLogger("jmthon")
+LOGS = logging.getLogger("jepthon")
 cmdhr = Config.COMMAND_HAND_LER
 
 bot = jmthon
