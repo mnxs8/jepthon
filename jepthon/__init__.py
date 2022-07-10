@@ -9,7 +9,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "1.0.0"
 __license__ = "كـتابة وتـعديل فريـق لندا"
-__author__ = "لندا <https://T.ME/Jepthon>"
+__author__ = "لندا <https://T.ME/egbbb>"
 __copyright__ = "linda TEAM (C) 2004 - 2022  " + __author__
 
 jmthon.version = __version__
@@ -61,19 +61,4 @@ except Exception:
 
 # Global Configiables
 COUNT_MSG = 0
-USERS = {}
-COUNT_PM = {}
-LASTMSG = {}
-CMD_HELP = {}
-ISAFK = False
-AFKREASON = None
-CMD_LIST = {}
-SUDO_LIST = {}
-# for later purposes
-INT_PLUG = ""
-LOAD_PLUG = {}
-
-# Variables
-BOTLOG = Config.BOTLOG
-BOTLOG_CHATID = Config.BOTLOG_CHATID
-PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
+USERS
