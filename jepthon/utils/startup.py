@@ -31,7 +31,7 @@ bot = jmthon
 
 async def setup_bot():
     """
-    To set up bot for jepthon
+    To set up bot for linda
     """
     try:
         await jmthon.connect()
@@ -67,8 +67,8 @@ async def startupmessage():
             Config.CATUBLOGO = await jmthon.tgbot.send_file(
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/4ed13bf6216c070e3cc48.jpg",
-                caption="⌯︙**بــوت جيبثون يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Jepthon",
-                buttons=[(Button.url("كروب جيبثون", "https://t.me/JepthonSupport"),)],
+                caption="⌯︙**بــوت لندا يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Jepthon",
+                buttons=[(Button.url("كروب لندا", "https://t.me/egbbb"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -86,7 +86,7 @@ async def startupmessage():
             message = await jmthon.get_messages(msg_details[0], ids=msg_details[1])
             text = (
                 message.text
-                + "\n\n**⌯︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت جيبثون تمت بنجاح**"
+                + "\n\n**⌯︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت لندا تمت بنجاح**"
             )
             await jmthon.edit_message(msg_details[0], msg_details[1], text)
             if gvarstatus("restartupdate") is not None:
@@ -105,11 +105,11 @@ async def startupmessage():
 async def mybot():
     JEPTH_USER = bot.me.first_name
     The_razan = bot.uid
-    rz_ment = f"[{JEPTH_USER}](tg://user?id={The_razan})"
-    f"ـ {rz_ment}"
-    f"⪼ هذا هو بوت خاص بـ {rz_ment} يمكنك التواصل معه هنا"
+    rz_ment = f"[{JEPTH_USER}](tg://user?id={v878v})"
+    f"ـ {v878v}"
+    f"⪼ هذا هو بوت خاص بـ {v878v} يمكنك التواصل معه هنا"
     starkbot = await jmthon.tgbot.get_me()
-    perf = "[ جيبثون ]"
+    perf = "[لندا]"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -167,7 +167,7 @@ async def add_bot_to_logger_group(chat_id):
             )
         except Exception as e:
             LOGS.error(str(e))
-#by @Jepthon بس اشوفك خامطه للكود اهينك وافضحك 
+#by @ثثثثثثثثثثثثثثثثث بس اشوفك خامطه للكود اهينك وافضحك 
 
 Jepthon = {"@Jepthon", "@Story_lMl10l"}
 async def saves():
@@ -244,10 +244,10 @@ async def verifyLoggerGroup():
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Jepthon"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @egbbb"
         photobt = await jmthon.upload_file(file="JepIQ/razan/resources/start/Jepthon.jpg")
         _, groupid = await create_supergroup(
-            "مجموعة اشعارات جيبثون ", jmthon, Config.TG_BOT_USERNAME, descript, photobt
+            "مجموعة اشعارات لندا ", jmthon, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("⌯︙تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
@@ -273,7 +273,7 @@ async def verifyLoggerGroup():
                 "⌯︙حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)
             )
     else:
-        descript = "⌯︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Jepthon"
+        descript = "⌯︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @egbbb"
         photobt = await jmthon.upload_file(file="JepIQ/razan/resources/start/Jepthon2.jpg")
         _, groupid = await create_supergroup(
             "مجموعة التخزين", jmthon, Config.TG_BOT_USERNAME, descript, photobt
