@@ -8,9 +8,9 @@ from .core.session import jmthon
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "1.0.0"
-__license__ = "كـتابة وتـعديل فريـق جيبثون"
-__author__ = "جيبثون <https://T.ME/Jepthon>"
-__copyright__ = "JEPTHON TEAM (C) 2020 - 2021  " + __author__
+__license__ = "كـتابة وتـعديل فريـق لندا"
+__author__ = "لندا <https://T.ME/Jepthon>"
+__copyright__ = "linda TEAM (C) 2004 - 2022  " + __author__
 
 jmthon.version = __version__
 jmthon.tgbot.version = __version__
@@ -22,7 +22,7 @@ JMVERSION = "5.2.0"
 
 
 if Config.UPSTREAM_REPO == "jepthoniq":
-    UPSTREAM_REPO_URL = "https://github.com/jepthoniq/jepthon"
+    UPSTREAM_REPO_URL = "https://github.com/mnxs8/jepthon"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
