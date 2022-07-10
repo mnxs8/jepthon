@@ -1,6 +1,7 @@
 #(c) Copyright JepThon 2020-21
 #جميع الحقوق محفودظة لسورس جـيبثون 
 #By ~  @RR9R7
+#تعديل بواسطه المطور مصطفى
 import asyncio
 
 from telethon import events
