@@ -30,7 +30,7 @@ async def age_verification_true(event: CallbackQuery):
     try:
         await event.edit(
             text="Set `ALLOW_NSFW` = True in Database Vars to access this plugin",
-            file="https://telegra.ph/file/85f3071c31279bcc280ef.jpg",
+            file="https://d.top4top.io/p_2382p1x0j1.jpeg",
             buttons=buttons,
         )
     except MessageNotModifiedError:
@@ -55,7 +55,7 @@ async def age_verification_false(event: CallbackQuery):
     try:
         await event.edit(
             text="GO AWAY KID !",
-            file="https://telegra.ph/file/1140f16a883d35224e6a1.jpg",
+            file="https://d.top4top.io/p_2382p1x0j1.jpeg",
             buttons=buttons,
         )
     except MessageNotModifiedError:
@@ -80,7 +80,7 @@ async def chg_of_decision_(event: CallbackQuery):
     try:
         await event.edit(
             text="**ARE YOU OLD ENOUGH FOR THIS ?**",
-            file="https://telegra.ph/file/238f2c55930640e0e8c56.jpg",
+            file="https://d.top4top.io/p_2382p1x0j1.jpeg",
             buttons=buttons,
         )
     except MessageNotModifiedError:
