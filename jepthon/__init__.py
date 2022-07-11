@@ -1,27 +1,3 @@
-import time
-
-import heroku3
-
-from .Config import Config
-from .core.logger import logging
-from .core.session import jmthon
-from .sql_helper.globals import addgvar, delgvar, gvarstatus
-
-__version__ = "1.0.0"
-__license__ = "كـتابة وتـعديل فريـق لندا"
-__author__ = "لندا <https://T.ME/egbbb>"
-__copyright__ = "linda TEAM (C) 2004 - 2022  " + __author__
-
-jmthon.version = __version__
-jmthon.tgbot.version = __version__
-LOGS = logging.getLogger("jepthon")
-bot = jmthon
-
-StartTime = time.time()
-JMVERSION = "5.2.0"
-
-
-if Config.UPSTREAM_REPO == "jepthoniq":
     UPSTREAM_REPO_URL = "https://github.com/jepthoniq/jepthon"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
@@ -61,4 +37,19 @@ except Exception:
 
 # Global Configiables
 COUNT_MSG = 0
-USERS
+USERS = {}
+COUNT_PM = {}
+LASTMSG = {}
+CMD_HELP = {}
+ISAFK = False
+AFKREASON = None
+CMD_LIST = {}
+SUDO_LIST = {}
+# for later purposes
+INT_PLUG = ""
+LOAD_PLUG = {}
+
+# Variables
+BOTLOG = Config.BOTLOG
+BOTLOG_CHATID = Config.BOTLOG_CHATID
+PM_LOGGER_GROUP_ID = Config.PM_LOGGER_GROUP_ID
