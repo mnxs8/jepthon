@@ -53,10 +53,10 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**- [سـورس جـيبثون](https://t.me/JepThon)\
+    text = f"**- [سـورس لندا](https://t.me/egbbb)\
         \n المسـاعد\
         \n\
-        \n◽ جيـبثون لـ {mention}**"
+        \n◽ لندا لـ {mention}**"
     buttons = [
         (Button.inline("ℹ️ • التعليمات •", data="check"),),
         (
@@ -228,7 +228,7 @@ async def inline_handler(event):  # sourcery no-metrics
             buttons = [
                 (
                     Button.inline("الحـالة ⚒️", data="stats"),
-                    Button.url(" Jepthon UsᴇʀBoᴛ", "https://t.me/Jepthon"),
+                    Button.url(" لندا UsᴇʀBoᴛ", "https://t.me/egbbb"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -559,10 +559,10 @@ async def inline_handler(event):  # sourcery no-metrics
     else:
         buttons = [
             (
-                Button.url("قنـاة السـورس ⚒️", "https://t.me/Jepthon"),
+                Button.url("قنـاة السـورس ⚒️", "https://t.me/egbbb"),
                 Button.url(
                     "كـروب المـساعدة 📬",
-                    "https://t.me/Jepthon1",
+                    "https://t.me/egbbb",
                 ),
             )
         ]
@@ -571,12 +571,12 @@ async def inline_handler(event):  # sourcery no-metrics
             url=ROZLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "**[بـوت جيـبثون 🧸♥](https://t.me/Jepthon)**\
+            "**[بـوت لندا 🧸♥](https://t.me/egbbb)**\
             \n\
-            \n❤ جيـبثون هـو بـوت بسـيط يدخـل الـى حسـابك لجعـلك تتحـكم به معـ اوامـر معينـة.\
+            \n❤ لندا هـو بـوت بسـيط يدخـل الـى حسـابك لجعـلك تتحـكم به معـ اوامـر معينـة.\
             \n\
             \n**اذا كـنت تـرغب بتـنصيـب السـورس عـلى حسـابك ,\
-            \n🐾 تعال الـى [كروب المسـاعدة](https://t.me/Jepthon1)!**",
+            \n🐾 تعال الـى [كروب المسـاعدة](https://t.me/egbbb)!**",
             "md",
         )
         result = types.InputBotInlineResult(
@@ -584,7 +584,7 @@ async def inline_handler(event):  # sourcery no-metrics
             type="photo",
             title="Jmthon 🧸♥",
             description="ادخـل كـروب المسـاعدة",
-            url="https://t.me/Jepthon1",
+            url="https://t.me/egbbb",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
