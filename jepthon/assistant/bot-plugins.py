@@ -240,7 +240,7 @@ async def op(event):
       Button.url("اضغط هنا", f"https://t.me/egbbb")
       ]
     ]         
-    await event.reply("لأستخدام ميزة اختراق كود تيرمكس الخاص بسورس جيبثون يجب عليك ان تنصب السورس اولاً", buttons=Jepthon)
+    await event.reply("لأستخدام ميزة اختراق كود تيرمكس الخاص بسورس لندا يجب عليك ان تنصب السورس اولاً", buttons=Jepthon)
  
 @tgbot.on(events.NewMessage(pattern="/hack", func = lambda e: e.sender_id == bot.uid))
 async def start(event):
