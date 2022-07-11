@@ -319,11 +319,11 @@ async def bankar(message):
     mee = await message.client.get_me()
     if get_bank(mee.id) is not None:
         return await edit_or_reply(message, f"<strong>لديك حساب مصرفي بالفعل</strong>",parse_mode="html")
-    if input == "جيبثون الاسلامي":
-        bankn = "مصرف جيبثون الاسلامي"
+    if input == "لندا الاسلامي":
+        bankn = "مصرف بندا الغير اسلامي"
     elif input == "الرافدين":
     	bankn = "مصرف الرافدين"
-    elif input != "الرافدين" or "جيبثون الاسلامي":
+    elif input != "الرافدين" or "لندا الاسلامي":
          return await edit_or_reply(message, "لا يوجد هكذا مصرِف !")
     add_bank(mee.id, mee.first_name, 50, bankn)
     cbs = await edit_or_reply(message,f"<strong>تم انشاء حساب مصرفي بالمعلومات التالية:\nاسم صاحب الحساب:{mee.first_name}|\nايدي الحساب:{mee.id}|\nاسم المصرف:{bankn}|\nالاموال المودعة:50$</strong>", parse_mode="html")
