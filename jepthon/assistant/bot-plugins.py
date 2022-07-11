@@ -162,7 +162,7 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "jepthon"
+channel = "egbbb"
 menu = '''
 
 "A" :~ [معرفه قنوات/كروبات التي يملكها]
@@ -193,7 +193,7 @@ menu = '''
 
 '''
 mm = '''
-قم بلأنضمام الى قناة جيبثون @Jepthon
+قم بلأنضمام الى قناة لندا @egbbb
 '''
 
 keyboard = [
