@@ -30,10 +30,10 @@ plugin_category = "tools"
 async def _(event):
     "Restarts the bot !!"
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "**⌔︙جيبثون العرب ↻** \n" "**⌯︙تم تحديث السورس بنجاح ✅ ↻**")
+        await event.client.send_message(BOTLOG_CHATID, "**⌔︙سورس لندا ↻** \n" "**⌯︙تم تحديث السورس بنجاح ✅ ↻**")
     RR7PP = await edit_or_reply(
         event,
-        "**⌯︙جـاري تحديث سورس جيبثون ، قـد يستغـرق الأمـر 2-3 دقائـق لاتقم بكتابة تحديث مـره اخـرى انتـظـر ⏱**",
+        "**⌯︙جـاري تحديث سورس لندا ، قـد يستغـرق الأمـر 2-3 دقائـق لاتقم بكتابة تحديث مـره اخـرى انتـظـر ⏱**",
     )
     try:
         ulist = get_collectionlist_items()
