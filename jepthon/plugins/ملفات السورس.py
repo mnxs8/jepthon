@@ -36,7 +36,7 @@ async def _(event):
     cmd = "env"
     o = (await _catutils.runcmd(cmd))[0]
     OUTPUT = (
-        f"**[جيـبثون](tg://need_update_for_some_feature/) قـائمـة الـفـارات:**\n\n\n{o}"
+        f"**[لندا](tg://need_update_for_some_feature/) قـائمـة الـفـارات:**\n\n\n{o}"
     )
     await edit_or_reply(event, OUTPUT)
 
