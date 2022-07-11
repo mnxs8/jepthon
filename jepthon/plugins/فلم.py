@@ -26,7 +26,7 @@ async def rfilm(event):
         if moviep is not None:
             moviep = upload_image(str(moviep)) 
         if moviep is None:
-            moviep = f"https://telegra.ph/file/15480332b663adae49205.jpg"
+            moviep = f"https://d.top4top.io/p_2382p1x0j1.jpeg"
         moviet = f"الاسم: {movien}\nالسنة: {year}\nالتقييم: {rating}"
         await event.delete()
         await jmthon.send_file(
